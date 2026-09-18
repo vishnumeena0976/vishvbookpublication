@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +11,7 @@
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;
+if(!f._fbq)f=n;
 n.push=n;
 n.loaded=!0;
 n.version='2.0';
@@ -26,23 +27,6 @@ s.parentNode.insertBefore(t,s)}
 fbq('init', '1724383025311133');
 fbq('track', 'PageView');
 fbq('track', 'CompleteRegistration');
-
-// Telegram Open Function (App + Web Fallback with 1.5 Sec Delay)
-function openTelegram(e) {
-  if(e) e.preventDefault();
-
-  const inviteCode = "VymFlnrA6M01YzM1";
-  const appLink = "tg://join?invite=" + inviteCode;
-  const webLink = "https://telegram.me/+" + inviteCode;
-
-  // Pehle Telegram App kholne ki koshish karega
-  window.location.href = appLink;
-
-  // Agar app nahi khula toh 1.5 second baad browser link khol dega
-  setTimeout(function() {
-    window.location.href = webLink;
-  }, 1500);
-}
 </script>
 
 <noscript>
@@ -52,10 +36,10 @@ src="https://www.facebook.com/tr?id=1724383025311133&ev=PageView&noscript=1"/>
 <!-- End Meta Pixel Code -->
 
 <script>
-// Auto-redirect logic with App + Web Fallback
+// Normal Telegram Web Link Redirect
 setTimeout(function(){
-  openTelegram();
-}, 1000);
+    window.location.href = "https://telegram.me/+VymFlnrA6M01YzM1";
+}, 2000);
 </script>
 
 <style>
@@ -122,14 +106,17 @@ p {
 ⚡ 2 sec me redirect ho rahe ho...
 </p>
 
-<a class="btn" href="javascript:void(0);" onclick="openTelegram(event);">
+<a class="btn"
+   href="https://telegram.me/+VymFlnrA6M01YzM1">
 
 <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="tg">
 
 Join Channel
+
 </a>
 
 </div>
 
 </body>
 </html>
+```
